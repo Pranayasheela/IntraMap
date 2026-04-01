@@ -1,0 +1,280 @@
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 80px;
+position:absolute;
+width:100%;
+z-index:10;
+box-sizing:border-box;
+}
+
+.logoSection{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logoImg{
+height:70px;
+}
+
+.siteName{
+font-size:24px;
+font-weight:600;
+}
+
+.navLinks{
+display:flex;
+gap:30px;
+}
+
+.navLinks a{
+text-decoration:none;
+color:white;
+position:relative;
+}
+
+.navLinks a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#9ec3b8;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+.navLinks a:hover::after{
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.heroOverlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.4),
+rgba(0,0,0,0.65)
+);
+backdrop-filter:blur(3px);
+}
+
+.heroContent{
+position:relative;
+z-index:2;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
+}
+
+/* WELCOME */
+/* WELCOME */
+
+.welcomeText{
+font-size:60px;
+font-weight:bold;
+letter-spacing:1px;
+line-height:1.2;
+
+display:inline-block;
+min-height:70px;
+
+background:linear-gradient(
+90deg,
+#ffffff,
+#9ec3b8,
+#ffffff
+);
+
+background-size:200% auto;
+
+background-clip:text;
+-webkit-background-clip:text;
+
+color:transparent;
+-webkit-text-fill-color:transparent;
+
+animation:shine 6s linear infinite;
+}
+
+/* typing cursor */
+
+
+/* SUBTEXT */
+
+.heroSub{
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* SEARCH BAR */
+
+.searchBox{
+display:flex;
+align-items:center;
+background:white;
+border-radius:50px;
+padding:6px;
+width:450px;
+max-width:90%;
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+.searchBox input{
+flex:1;
+border:none;
+outline:none;
+padding:15px 20px;
+font-size:16px;
+border-radius:50px;
+}
+
+.searchBox button{
+border:none;
+background:#1c2d30;
+color:white;
+padding:14px 26px;
+font-size:16px;
+border-radius:40px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.searchBox button:hover{
+background:#142124;
+transform:scale(1.05);
+}
+
+/* FLOATING SHAPES */
+
+.floatingShape{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+animation:float 12s infinite ease-in-out;
+}
+
+.shape1{
+width:120px;
+height:120px;
+top:20%;
+left:10%;
+}
+
+.shape2{
+width:200px;
+height:200px;
+bottom:10%;
+right:10%;
+}
+
+.shape3{
+width:150px;
+height:150px;
+top:65%;
+left:15%;
+}
+
+/* ABOUT */
+
+.about{
+background:#f3f0ec;
+color:#333;
+padding:100px 40px;
+border-radius:70px 70px 0 0;
+text-align:center;
+}
+
+.about h2{
+font-size:42px;
+}
+
+.aboutIntro{
+max-width:720px;
+margin:auto;
+margin-top:20px;
+margin-bottom:60px;
+line-height:1.6;
+}
+
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+max-width:1000px;
+margin:auto;
+}
+
+.featureCard{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+transition:0.35s;
+}
+
+.featureCard:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+.footer{
+background:#1c2d30;
+padding:25px;
+text-align:center;
+}
+
+/* ANIMATIONS */
+
+@keyframes shine{
+0%{background-position:0%}
+100%{background-position:200%}
+}
+
+@keyframes blink{
+0%,50%,100%{opacity:1}
+25%,75%{opacity:0}
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-30px)}
+100%{transform:translateY(0)}
+}
+.loginPageLogo{
+position:absolute;
+top:30px;
+left:-50px;
+width:90px;
+z-index:3;
+}
